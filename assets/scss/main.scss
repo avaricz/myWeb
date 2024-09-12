@@ -1,0 +1,10 @@
+@import './base.scss';
+
+#__nuxt {
+    margin: 0 auto;
+    padding: 0 2rem;
+    min-height: 100vh;
+    max-width: $large-screen;
+    display: flex;
+    gap: 1rem
+}
