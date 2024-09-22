@@ -7,8 +7,10 @@
         
         <div>
             <div class="title-area">
+                <NuxtLink :to="`/project/${project.route}`">
+                    <h3 class="title">{{ project.project }}</h3>
 
-                <h3 class="title">{{ project.project }}</h3>
+                </NuxtLink>
                 <a v-if="project.link" :href="project.link">
                    <i class="pi pi-link"></i>
                 </a>
@@ -31,15 +33,8 @@
 </template>
 
 <script setup lang="ts">
+import type { Project } from '@/data/interfaces'
 
-    interface Project {
-        project: string,
-        description: string,
-        img: string,
-        labels: string[],
-        link?: string,
-        github?: string
-    }
     const props = defineProps<{
         project: Project
     }>()
