@@ -1,9 +1,9 @@
 <template>
     <header>
-        <div>
+        <div class="header-wrapper">
             <h1>Adam Hádl</h1>
-            <h2>Software engineer</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus deserunt, perspiciatis et numquam tempora.</p>
+            <h2>Frontend developer</h2>
+            <p>Hledám příležitosti k uplatnění svých shopností. </p>
             
             <NavBar />
         </div>
@@ -19,27 +19,18 @@
 </script>
 
 <style lang="scss" scoped>
+.header-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
 h1{
     font-size: 3rem;
     font-weight: Bold;
-
+    color: $title;
 }
 h2 {
     font-size: 1.2rem;
-    color: $blue;
-}
-
-header{
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: .5rem;
-    width: 50%;
-    max-height: 100vh;
-    padding: 6rem 0;
-
+    color: $subtitle;
 }
 
 p {
